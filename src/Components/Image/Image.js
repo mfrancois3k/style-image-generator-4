@@ -1,28 +1,10 @@
 // import { GetUnsplash } from "../../Services/GetUnsplash";
 import { useEffect, useState } from "react";
 import axios from "axios";
-
+import { Link } from "react-router-dom";
 // import { ImageContext } from "../App";
 
-const Image = () => {
-  // const [image, setImage] = useState([]);
-
-  // async function getImageData() {
-  //   if (props.data) {
-  //     const result = await axios.get(GetUnsplash + props.data);
-
-  //     setImage(result.data);
-  //     console.log(result.data);
-  //     return result;
-  //   } else {
-  //     setImage([]);
-  //   }
-  // }
-
-  // useEffect(() => {
-  //   getImageData();
-  // }, []); // eslint-disable-line react-hooks/exhaustive-deps
-
+const Image = (props) => {
   const [images, setImages] = useState([]);
   const [loaded, setIsLoaded] = useState(false);
 
@@ -53,6 +35,9 @@ const Image = () => {
 
   return (
     <>
+      <Link to="/profile" state={props}>
+        Go Profile Image Page{" "}
+      </Link>
       {/* <img src={image.url} alt="cat" /> */}
       {images.map((image, index) => (
         <UnsplashImage url={image.urls.small} key={index} />
