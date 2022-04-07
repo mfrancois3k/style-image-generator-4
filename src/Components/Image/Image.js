@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import "./Image.css";
 // import { ImageContext } from "../App";
 
 const Image = (props) => {
@@ -38,9 +39,12 @@ const Image = (props) => {
       <Link to="/profile" state={props}>
         Go Profile Image Page{" "}
       </Link>
+      <Link to="/" state={props}>
+        Go Home Image Page{" "}
+      </Link>
       {/* <img src={image.url} alt="cat" /> */}
       {images.map((image, index) => (
-        <UnsplashImage url={image.urls.small} key={index} />
+        <UnsplashImage images={images} url={image.urls.small} key={index} />
       ))}
     </>
   );

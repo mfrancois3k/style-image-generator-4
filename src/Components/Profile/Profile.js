@@ -1,6 +1,7 @@
 import React from "react";
 // import { useNavigate, useParams } from "react—router—dom";
 import { Link } from "react-router-dom";
+// import IndividualImage from "../Image/IndividualImage";
 
 const Profile = (props) => {
   // let navigate = useNavigate();
@@ -13,7 +14,7 @@ const Profile = (props) => {
       <Link to="/" state={props}>
         Go Home Image Page{" "}
       </Link>
-      <h1 style={{ color: "red" }}>Profile Page </h1>``
+      <h1 style={{ color: "red" }}>Profile Page </h1>
     </>
   );
 };
